@@ -6,7 +6,6 @@ C programming practice environment for the 5EWC0 Banking formative exam dated
 - [Exam in Markdown](EXAM.md): all seven tasks, examples, hints, and ten test cases.
 - [Original exam PDF](formative2025.pdf).
 - `main.c`: command skeleton ready for your solution.
-- `starter.c`: a clean copy of the reconstructed baseline, without task solutions.
 - `tests/`: ten published input/output cases and a test runner.
 
 ## Getting started
@@ -30,12 +29,11 @@ No virtual environment activation is necessary: `make test` automatically create
 and uses `.venv/bin/python`. Compilation uses C99 with
 `-Wall -Wextra -Werror -g`. For Clang, use `make CC=clang`.
 `main.c` already contains the skeleton and passes baseline case 0.
-To reset your solution, copy `starter.c` over `main.c` (this replaces your work).
 
 ## Exam baseline
 
 The exam refers to a separately supplied skeleton that is not included in the
-source PDF. `starter.c` is a local reconstruction, not the original skeleton.
+source PDF. The baseline in `main.c` is a local reconstruction, not the original skeleton.
 It initializes the five balances and bank name, prints the welcome message,
 handles `q`, and outputs the final data. Tasks 1–7 are left to implement.
 The command loop uses `for (;;)` with a simple `if (command == 'q')`
@@ -71,6 +69,6 @@ published examples, not extra hidden cases.
 
 `EXAM.md` preserves the exam's wording, including inconsistencies. The task
 examples use `Accounts` in the final data dump, while the explicit test cases
-use `Account`. The local tests and reconstructed starter follow `Account`.
+use `Account`. The local tests and `main.c` follow `Account`.
 PDF layout, page breaks, decorative borders, and QR-code footers are omitted
 from the Markdown; the original PDF is included unchanged.

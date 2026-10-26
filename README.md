@@ -5,8 +5,8 @@ C programming practice environment for the 5EWC0 Banking formative exam dated
 
 - [Exam in Markdown](EXAM.md): all seven tasks, examples, hints, and ten test cases.
 - [Original exam PDF](formative2025.pdf).
-- `main.c`: empty file for your solution.
-- `starter.c`: optional reconstructed baseline, without task solutions.
+- `main.c`: command skeleton ready for your solution.
+- `starter.c`: a clean copy of the reconstructed baseline, without task solutions.
 - `tests/`: ten published input/output cases and a test runner.
 
 ## Getting started
@@ -18,8 +18,6 @@ From the repository directory:
 
 ```sh
 make setup             # Create the local .venv
-# Optional, before starting your solution:
-cp starter.c main.c     # Replaces main.c with the reconstructed baseline
 make                   # Compile main.c to build/main
 make run               # Run interactively
 make test              # Run all 10 published cases
@@ -31,7 +29,8 @@ make clean             # Remove build outputs and test bytecode; keep .venv
 No virtual environment activation is necessary: `make test` automatically creates
 and uses `.venv/bin/python`. Compilation uses C99 with
 `-Wall -Wextra -Werror -g`. For Clang, use `make CC=clang`.
-Build/run/test stop with an explanation until `main.c` is nonempty.
+`main.c` already contains the skeleton and passes baseline case 0.
+To reset your solution, copy `starter.c` over `main.c` (this replaces your work).
 
 ## Exam baseline
 

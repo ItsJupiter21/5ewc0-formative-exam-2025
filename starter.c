@@ -33,10 +33,7 @@ int main(void)
     for (;;)
     {
         printf("Command? ");
-        if (scanf(" %c", &command) != 1)
-        {
-            return 1;
-        }
+        scanf(" %c", &command);
 
         if (command == 'q')
         {

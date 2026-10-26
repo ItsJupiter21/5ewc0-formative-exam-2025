@@ -1,0 +1,62 @@
+[
+    {
+        "case": 0,
+        "description": "Quit and print initial account data",
+        "stdin": "q\n",
+        "stdout": "** Bank **\nCommand? ** accounts **\nAccount 0: -100.00\nAccount 1: 4.65\nAccount 2: 1333.33\nAccount 3: 0.00\nAccount 4: -50.45\n** bank **\nThe first PEC bank [v1.0]\n"
+    },
+    {
+        "case": 1,
+        "description": "Print positive and negative balances",
+        "stdin": "p\nq\n",
+        "stdout": "** Bank **\nCommand? Account 0: negative\nAccount 1: positive\nAccount 2: positive\nAccount 3: positive\nAccount 4: negative\nCommand? ** accounts **\nAccount 0: -100.00\nAccount 1: 4.65\nAccount 2: 1333.33\nAccount 3: 0.00\nAccount 4: -50.45\n** bank **\nThe first PEC bank [v1.0]\n"
+    },
+    {
+        "case": 2,
+        "description": "Deduct a service charge of 2.34",
+        "stdin": "s\n2.34\nq\n",
+        "stdout": "** Bank **\nCommand? Service charge? Command? ** accounts **\nAccount 0: -102.34\nAccount 1: 2.31\nAccount 2: 1330.99\nAccount 3: -2.34\nAccount 4: -52.79\n** bank **\nThe first PEC bank [v1.0]\n"
+    },
+    {
+        "case": 3,
+        "description": "Apply tiered interest",
+        "stdin": "i\nq\n",
+        "stdout": "** Bank **\nCommand? Command? ** accounts **\nAccount 0: -105.00\nAccount 1: 4.74\nAccount 2: 1356.66\nAccount 3: 0.00\nAccount 4: -52.97\n** bank **\nThe first PEC bank [v1.0]\n"
+    },
+    {
+        "case": 4,
+        "description": "Withdraw from account 0 and deposit into account 4",
+        "stdin": "b\n0\n-23.45\nb\n4\n123.99\nq\n",
+        "stdout": "** Bank **\nCommand? Account? Amount? Command? Account? Amount? Command? ** accounts **\nAccount 0: -123.45\nAccount 1: 4.65\nAccount 2: 1333.33\nAccount 3: 0.00\nAccount 4: 73.54\n** bank **\nThe first PEC bank [v1.0]\n"
+    },
+    {
+        "case": 5,
+        "description": "Retry account IDs outside the array bounds",
+        "stdin": "b\n-1\n5\n3\n-12.34\nq\n",
+        "stdout": "** Bank **\nCommand? Account? Account? Account? Amount? Command? ** accounts **\nAccount 0: -100.00\nAccount 1: 4.65\nAccount 2: 1333.33\nAccount 3: -12.34\nAccount 4: -50.45\n** bank **\nThe first PEC bank [v1.0]\n"
+    },
+    {
+        "case": 6,
+        "description": "Compute the percentage of debtors",
+        "stdin": "d\nq\n",
+        "stdout": "** Bank **\nCommand? Percentage debtors: 40.0\nCommand? ** accounts **\nAccount 0: -100.00\nAccount 1: 4.65\nAccount 2: 1333.33\nAccount 3: 0.00\nAccount 4: -50.45\n** bank **\nThe first PEC bank [v1.0]\n"
+    },
+    {
+        "case": 7,
+        "description": "Remove the version from the initial bank name",
+        "stdin": "r\nq\n",
+        "stdout": "** Bank **\nCommand? Command? ** accounts **\nAccount 0: -100.00\nAccount 1: 4.65\nAccount 2: 1333.33\nAccount 3: 0.00\nAccount 4: -50.45\n** bank **\nThe first PEC bank\n"
+    },
+    {
+        "case": 8,
+        "description": "Read a new bank name containing spaces",
+        "stdin": "n\nThe second PEC bank [sw v1.2.3]\nq\n",
+        "stdout": "** Bank **\nCommand? Bank name? Command? ** accounts **\nAccount 0: -100.00\nAccount 1: 4.65\nAccount 2: 1333.33\nAccount 3: 0.00\nAccount 4: -50.45\n** bank **\nThe second PEC bank [sw v1.2.3]\n"
+    },
+    {
+        "case": 9,
+        "description": "Combine all seven tasks",
+        "stdin": "s\n4.45\nb\n2\n-328.88\nb\n3\n-5000\ni\np\nd\nn\nThe third PEC bank [version (1.2a)]\nr\nq\n",
+        "stdout": "** Bank **\nCommand? Service charge? Command? Account? Amount? Command? Account? Amount? Command? Command? Account 0: negative\nAccount 1: positive\nAccount 2: positive\nAccount 3: negative\nAccount 4: negative\nCommand? Percentage debtors: 60.0\nCommand? Bank name? Command? Command? ** accounts **\nAccount 0: -109.67\nAccount 1: 0.20\nAccount 2: 1020.00\nAccount 3: -5254.67\nAccount 4: -57.65\n** bank **\nThe third PEC bank\n"
+    }
+]

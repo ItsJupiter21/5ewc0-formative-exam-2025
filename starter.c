@@ -30,13 +30,40 @@ int main(void)
     char command;
     initializeAccountData(accounts, 5, bank);
     printf("** Bank **\n");
-    do {
+    for (;;)
+    {
         printf("Command? ");
-        if (scanf(" %c", &command) != 1) {
+        if (scanf(" %c", &command) != 1)
+        {
             return 1;
         }
-        /* Add the commands for tasks 1-7 here. */
-    } while (command != 'q');
-    outputAccountData(accounts, 5, bank);
-    return 0;
+
+        switch (command)
+        {
+        case 'q':
+            outputAccountData(accounts, 5, bank);
+            return 0;
+        case 'p':
+            /* TODO Task 1: print positive and negative balances. */
+            break;
+        case 's':
+            /* TODO Task 2: read and deduct a service charge. */
+            break;
+        case 'i':
+            /* TODO Task 3: apply interest. */
+            break;
+        case 'b':
+            /* TODO Task 4: read a valid account ID and change its balance. */
+            break;
+        case 'd':
+            /* TODO Task 5: print the percentage of debtors. */
+            break;
+        case 'r':
+            /* TODO Task 6: remove the version from the bank name. */
+            break;
+        case 'n':
+            /* TODO Task 7: read a new bank name. */
+            break;
+        }
+    }
 }

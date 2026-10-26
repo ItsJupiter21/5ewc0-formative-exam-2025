@@ -39,6 +39,8 @@ The exam refers to a separately supplied skeleton that is not included in the
 source PDF. `starter.c` is a local reconstruction, not the original skeleton.
 It initializes the five balances and bank name, prints the welcome message,
 handles `q`, and outputs the final data. Tasks 1–7 are left to implement.
+Commands are handled by a `switch` inside a `for (;;)` loop, with a TODO case
+for each task. The `q` case prints the final data and returns from `main`.
 The reconstruction supplies suitable local signatures for `initializeAccountData`
 and `outputAccountData`; their original signatures were not provided.
 
